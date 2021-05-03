@@ -1,7 +1,29 @@
 .container {
   flex: 0 0 480px;
   overflow-y: scroll;
+  min-height: 100vh;
   max-height: 100vh;
+  border-right: 1px solid black;
+}
+
+.title {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.title h2 {
+  margin: 0px;
+}
+
+.title button {
+  background-color: #FF4136;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .entryItem, .selectedEntry {

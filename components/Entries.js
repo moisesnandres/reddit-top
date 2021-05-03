@@ -10,8 +10,17 @@ export default function Entries({ entries, setEntries, setEntry, ...rest }) {
     setEntry(entry)
   }
 
+  const deleteAll = () => {
+    setEntry({})
+    setEntries([])
+  }
+
   return (
     <section className={styles.container}>
+      <div className={styles.title}>
+        <h2>Top 50 Entries</h2>
+        <button onClick={deleteAll}>Delete All</button>
+      </div>
       {
         entries.map(entry => {
           const selectedEntry = rest.entry.data && (entry.data.id === rest.entry.data.id)
