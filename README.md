@@ -2,12 +2,31 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+You can view it [here](https://reddit-top-moisesnandres1.vercel.app/)
+
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+yarn install
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Tests
+
+Run the e2e tests headless with cypress.
+
+```bash
+yarn test
+```
+
+## TODO
+
+- [x] Use github actions for e2e tests (Done [here](https://github.com/moisesnandres/reddit-top/actions/workflows/e2e-tests.yml))
+- [ ] Fix issue with Reddit API token
+- [ ] Add pagination
+- [ ] Add animation
+- [ ] Use tailwind
