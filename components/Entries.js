@@ -15,6 +15,16 @@ export default function Entries({ entries, setEntries, setEntry, ...rest }) {
     setEntries([])
   }
 
+  const deleteEntry = (ev, entry, selectedEntry) => {
+    ev.stopPropagation();
+    const id = entry.data.id
+    const updatedEntries = entries.filter(item => item.data.id !== id)
+    setEntries(updatedEntries)
+    if (selectedEntry) {
+      setEntry({})
+    }
+  }
+
   return (
     <section className={styles.container}>
       <div className={styles.title}>
@@ -29,6 +39,7 @@ export default function Entries({ entries, setEntries, setEntry, ...rest }) {
               <h4>{entry.data.title}</h4>
               <p>{entry.data.author}</p>
               <p>{entry.data.visited ? 'Visited' : 'Unread'}</p>
+              <button onClick={(ev) => deleteEntry(ev, entry, selectedEntry)}>Delete</button>
             </article>
           )
         })

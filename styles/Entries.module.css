@@ -17,13 +17,17 @@
   margin: 0px;
 }
 
-.title button {
+.title button, .entryItem button, .selectedEntry button {
   background-color: #FF4136;
   color: #FFFFFF;
   border-radius: 4px;
   padding: 8px;
   border: 1px solid transparent;
   cursor: pointer;
+}
+
+.entryItem button, .selectedEntry button {
+  margin-top: 4px;
 }
 
 .entryItem, .selectedEntry {
