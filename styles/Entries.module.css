@@ -4,21 +4,25 @@
   max-height: 100vh;
 }
 
-.entryItem {
+.entryItem, .selectedEntry {
   padding: 8px;
   border: 1px solid black;
   cursor: pointer;
   background-color: #D3D3D3;
 }
 
+.selectedEntry {
+  background-color: #0074D9;
+}
+
 .entryItem:hover {
   background-color: #FFFFFF;
 }
 
-.entryItem h4 {
+.entryItem h4, .selectedEntry h4 {
   margin: 0px;
 }
 
-.entryItem p {
+.entryItem p, .selectedEntry p {
   margin: 4px 0px 0px;
 }
