@@ -2,14 +2,13 @@ name: e2e-tests
 on: [workflow_dispatch]
 
 jobs:
-  build:
-    name: Test
+  cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.0.0
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
         with:
-          cmd: install
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: test
+          build: npm run build
+          start: npm start
