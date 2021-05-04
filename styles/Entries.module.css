@@ -1,9 +1,10 @@
 .container {
   flex: 0 0 480px;
-  overflow-y: scroll;
   min-height: 100vh;
   max-height: 100vh;
   border-right: 1px solid black;
+  flex-direction: column;
+  display: flex;
 }
 
 .title {
@@ -51,4 +52,25 @@
 
 .entryItem p, .selectedEntry p {
   margin: 4px 0px 0px;
+}
+
+.entries {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.pagination {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid black;
+}
+
+.pagination button {
+  border: 1px solid #D3D3D3;
+  border-radius: 4px;
+  padding: 4px 8px;
+  width: 100px;
+  cursor: pointer;
 }

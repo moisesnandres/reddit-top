@@ -8,6 +8,7 @@ export default function Home() {
   const [entries, setEntries] = useState([])
   const [entry, setEntry] = useState({})
   const [subreddit, setSubreddit] = useState('redditdev')
+  const [page, setPage] = useState(0)
 
   useEffect(() => {
     async function fetchTopEntries() {
@@ -28,7 +29,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.mainContainer}>
-        <Entries entries={entries} {...{setEntries, setEntry, entry}}/>
+        <Entries entries={entries} {...{setEntries, setEntry, entry, page, setPage}}/>
         <Entry entry={entry} />
       </main>
     </div>
