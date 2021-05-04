@@ -11,13 +11,13 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchTopEntries() {
-      const response = await fetch(`http://reddit.com/r/${subreddit}.json?limit=50`)
+      const response = await fetch(`api/top?topic=${subreddit}`)
       const jsonResponse = await response.json()
       setEntries(jsonResponse.data.children)
     }
 
     fetchTopEntries()
-  }, [])
+  }, [subreddit])
 
   return (
     <div>
