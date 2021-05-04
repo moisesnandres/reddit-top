@@ -1,6 +1,6 @@
 import styles from '../styles/Entries.module.css'
 
-export default function Entries({ entries, setEntries, setEntry, page, setPage, ...rest }) {
+export default function Entries({ entries, setEntries, setEntry, page, setPage, subreddit, setSubreddit, ...rest }) {
   const openEntry = (entry) => {
     const id = entry.data.id
     const selectedEntry = entries.find(item => item.data.id === id)
@@ -24,13 +24,24 @@ export default function Entries({ entries, setEntries, setEntry, page, setPage, 
       setEntry({})
     }
   }
+
   const initialEntry = page * 10
+
+  const changeSubreddit = (ev) => {
+    setSubreddit(ev.target.value)
+  }
 
   return (
     <section className={styles.container}>
-      <div className={styles.title}>
-        <h2>Top 50 Entries</h2>
-        <button onClick={deleteAll}>Delete All</button>
+      <div className={styles.header}>
+        <div className={styles.title}>
+          <h2>Top 50 Entries</h2>
+          <button onClick={deleteAll}>Delete All</button>
+        </div>
+        <div className={styles.search}>
+          <label htmlFor="search">Search by subreddit: </label>
+          <input id="search" name="search" type='text' value={subreddit} onChange={changeSubreddit} />
+        </div>
       </div>
       <div className={styles.entries}>
         {

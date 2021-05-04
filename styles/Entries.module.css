@@ -7,11 +7,14 @@
   display: flex;
 }
 
-.title {
+.header {
   padding: 8px;
+  border-bottom: 1px solid black;
+}
+
+.title {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid black;
 }
 
 .title h2 {
@@ -73,4 +76,18 @@
   padding: 4px 8px;
   width: 100px;
   cursor: pointer;
+}
+
+.search {
+  margin-top: 8px;
+}
+
+.search input {
+  margin-left: 4px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  font-size: inherit;
+  font-family: inherit;
+  outline: none;
+  padding: 8px;
 }

@@ -29,7 +29,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.mainContainer}>
-        <Entries entries={entries} {...{setEntries, setEntry, entry, page, setPage}}/>
+        <Entries entries={entries} {...{setEntries, setEntry, entry, page, setPage, subreddit, setSubreddit}}/>
         <Entry entry={entry} />
       </main>
     </div>
