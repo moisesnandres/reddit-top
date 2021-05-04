@@ -7,10 +7,11 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   const [entries, setEntries] = useState([])
   const [entry, setEntry] = useState({})
+  const [subreddit, setSubreddit] = useState('redditdev')
 
   useEffect(() => {
     async function fetchTopEntries() {
-      const response = await fetch('api/top')
+      const response = await fetch(`http://reddit.com/r/${subreddit}.json?limit=50`)
       const jsonResponse = await response.json()
       setEntries(jsonResponse.data.children)
     }
