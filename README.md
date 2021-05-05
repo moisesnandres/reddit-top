@@ -28,5 +28,9 @@ yarn test
 - [x] Use github actions for e2e tests (Done [here](https://github.com/moisesnandres/reddit-top/actions/workflows/e2e-tests.yml))
 - [x] Fix issue with Reddit API token (I am using endpoints without token)
 - [x] Add pagination
+- [x] Search by subreddit
+- [ ] Handle errors from endpoint
+- [ ] Keep read entries
 - [ ] Add animation
+- [ ] Update e2e test
 - [ ] Use tailwind
